@@ -1,0 +1,64 @@
+@import '_mixins.scss';
+
+/* Анимации активных элементов*/
+.button {
+  &__white {
+    cursor: pointer;
+    @include animeTransitionEasyInOut03(outline outline-color background-color);
+
+    &:focus {
+      outline-color: $colorBrandPrimary;
+    }
+    &:hover {
+      outline-color: transparent;
+      background-color: $colorBrandSecondary2;
+    }
+    &:active {
+      outline-color: $colorBrandPrimary;
+      background-color: $colorStateClick;
+    }
+  }
+  &__blue {
+    cursor: pointer;
+    @include animeTransitionEasyInOut03(outline outline-color background-color);
+
+    &:focus {
+      outline-color: $colorBrandPrimary;
+      background-color: $colorStateInfo;
+    }
+    &:hover {
+      outline-color: $colorBrandPrimary;
+      background-color: $colorStateHover;
+    }
+    &:active {
+      outline-color: $colorBrandPrimary;
+      background-color: $colorStateClick;
+    }
+  }
+}
+
+.input-anime {
+  outline-color: $colorWhite;
+  @include animeTransitionEasyInOut03(outline-color);
+
+  &:focus {
+    outline-color: $colorBrandPrimary;
+
+    &.is-error {
+      outline-color: $colorStateError;
+    }
+  }
+}
+
+.block-anime {
+  cursor: pointer;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 0%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 0%, 95%);
+  }
+}

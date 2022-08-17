@@ -1,0 +1,23 @@
+@mixin animeTransitionLinear03($prop) {
+  transition-property: $prop;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+@mixin animeTransitionEasy03($prop) {
+  transition-property: $prop;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+@mixin animeTransitionEasyInOut03($prop) {
+  transition-property: $prop;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin animeTransitionEasy08($prop) {
+  transition-property: $prop;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+}
